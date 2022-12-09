@@ -16,7 +16,7 @@ const variants = {
   },
 };
 
-const Navigation: React.FC = () => {
+const Navigation = ({ toggle }) => {
   return (
     <motion.ul
       className="absolute top-0 right-0 z-30 w-screen md:w-full px-8 h-full bg-gray-400"
@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
 
       <div className=" mt-12">
         {links.map((link) => (
-          <MenuItem link={link} key={link.id} />
+          <MenuItem toggle={toggle} link={link} key={link.id} />
         ))}
       </div>
     </motion.ul>
